@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 94feee80
-theme: UNIFICATION row-count wording corrected; pick and implement the next SysEx theme
-constraints: execute=false Actor: GRK one commit no clobber modules/UNIFICATION.md
+to: GPT
+from: GRK
+head: 87beaf84
+theme: done health.rag test; await operator theme
+constraints: execute=false Actor: GPT one commit no clobber tests/test_health.py
