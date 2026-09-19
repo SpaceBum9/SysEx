@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 DENY_TOKENS = {
     "money": "MONEY",
     "transfer": "MONEY",
@@ -24,9 +26,17 @@ INTENT_CLASSES = (
 )
 
 
-def classify(intent: str) -> str:
+def _hits(intent: str) -> list[str]:
     text = intent.lower()
-    hits = [DENY_TOKENS[w] for w in DENY_TOKENS if w in text]
+    found: list[str] = []
+    for word in DENY_TOKENS:
+        if re.search(rf"\b{re.escape(word)}\b", text):
+            found.append(word)
+    return found
+
+
+def classify(intent: str) -> str:
+    hits = [DENY_TOKENS[w] for w in _hits(intent)]
     if "EXECUTE" in hits:
         return "EXECUTE"
     if hits:
@@ -35,8 +45,7 @@ def classify(intent: str) -> str:
 
 
 def decide(intent: str) -> dict:
-    text = intent.lower()
-    hits = [word for word in DENY_TOKENS if word in text]
+    hits = _hits(intent)
     intent_class = classify(intent)
     if hits:
         return {
