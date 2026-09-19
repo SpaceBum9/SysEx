@@ -25,6 +25,7 @@ class UnificationTests(unittest.TestCase):
         self.assertTrue(payload["hold"])
         self.assertIn("ZT", payload["modules"])
         self.assertIn("A4B", payload["modules"])
+        self.assertIn("IVF", payload["modules"])
         self.assertFalse(payload["atm"]["ready"])
         self.assertTrue(payload["zero_tier"]["owned"])
         self.assertFalse(payload["zero_tier"]["joined"])
