@@ -1,8 +1,8 @@
 # SysEx skeleton status 2026-09-19
 
-Running code: packet.compose, ATM, GARAS.classify, RC wheel+NIKITA, AMB snapshot, trace stamp/verify, health dict, i18n stub, ZT status flags, murmur unused, CI+hooks.
-Paper: A4B router, BILO lyrics/score, schizoframe, keccak notes, pack2.
+Running: packet.compose + CLI, ATM, GARAS.classify, RC, AMB, A4B.route, trace stamp/verify, health dict + 127.0.0.1 stub, i18n stub, ZT flags, rag_query + rag_vec TF-IDF, CI+hooks, Actor trailer, MANIFEST coverage test, test_garas_atm.
+Paper: BILO full lyrics, Anke chats, keccak notes, schizoframe.
 Outside git: moreatm 503, ZT owned not joined.
 
-Missing for skeleton: packet CLI, health HTTP, A4B as code, RAG embed/query, MANIFEST refresh, README sync.
-Not missing: another hash, SHA-3 implementation, CD deploy.
+Still open: stored embed index, CD, live rails.
+Not missing: SHA-3 in stamp, Pinecone, Drive desk.
