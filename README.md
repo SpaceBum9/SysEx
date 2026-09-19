@@ -1,17 +1,25 @@
 # SysEx
 
-This is the SoS runtime root.
+SoS unification root. One process, named modules, no extra MCT repos.
 
-Not a merge of the old fourteen repositories. Those stay where they are.
+## Modules
 
-## Rules
+| Id | Job |
+|---|---|
+| MCT | this kernel |
+| ATM | public verbs + moreatm.com surface |
+| RC | who speaks next |
+| GARAS | allow / deny / reason |
+| BILO | lexicon + score, not statute |
+| ZT | ZeroTier overlay (declared, not joined) |
+| AMB | ambiguity / claim guard |
+| I18N | de en fr pl ko gs |
 
-- `execute`: false
-- `vendor_live`: false
-- `hold`: true
-- No credentials in this repository
-- No Dual-Allow ballots in-tree
-- moreatm.com is blocked on Cloudflare/origin (503). Do not wait on it.
+`execute=false`. `vendor_live=false`. `hold=true`. No credentials.
+
+moreatm.com is the ATM hostname when Cloudflare origin works (today: 503). Fallback: this repo.
+
+ZeroTier is the private lane between nodes. Until a network id is configured locally (never committed), ZT status is `disconnected`.
 
 ## Run
 
@@ -19,5 +27,3 @@ Not a merge of the old fourteen repositories. Those stay where they are.
 python3 src/health.py
 python3 -m unittest discover -s tests -v
 ```
-
-Done means `/health` JSON prints and tests pass. Nothing else is in scope until that stays true.

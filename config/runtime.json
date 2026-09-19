@@ -1,14 +1,27 @@
 {
   "name": "SysEx",
   "role": "sos-root",
+  "purpose": "unification",
   "execute": false,
   "vendor_live": false,
   "hold": true,
   "default": "denied",
   "live_rail": false,
   "stores_credentials": false,
+  "modules": ["MCT", "ATM", "RC", "GARAS", "BILO", "ZT", "AMB", "I18N"],
   "surfaces": {
     "health": true,
-    "moreatm": false
-  }
+    "moreatm": {
+      "host": "moreatm.com",
+      "ready": false,
+      "reason": "origin_503_or_cloudflare_zone"
+    }
+  },
+  "zero_tier": {
+    "needed": true,
+    "joined": false,
+    "network_id": null,
+    "note": "network id stays local, never in git"
+  },
+  "languages": ["de", "en", "fr", "pl", "ko", "gs"]
 }

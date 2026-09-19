@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-"""Print SoS health from config/runtime.json. No network. No execute."""
-
 from __future__ import annotations
 
 import json
@@ -17,15 +15,30 @@ def load_runtime() -> dict:
 
 def health() -> dict:
     runtime = load_runtime()
+    atm = runtime.get("surfaces", {}).get("moreatm", {})
+    zt = runtime.get("zero_tier", {})
     return {
         "ok": True,
         "name": runtime.get("name"),
         "role": runtime.get("role"),
+        "purpose": runtime.get("purpose"),
         "execute": bool(runtime.get("execute")),
         "vendor_live": bool(runtime.get("vendor_live")),
         "hold": bool(runtime.get("hold")),
         "default": runtime.get("default"),
         "live_rail": bool(runtime.get("live_rail")),
+        "modules": runtime.get("modules", []),
+        "languages": runtime.get("languages", []),
+        "atm": {
+            "host": atm.get("host"),
+            "ready": bool(atm.get("ready")),
+            "reason": atm.get("reason"),
+        },
+        "zero_tier": {
+            "needed": bool(zt.get("needed")),
+            "joined": bool(zt.get("joined")),
+            "network_id_present": zt.get("network_id") is not None,
+        },
     }
 
 
