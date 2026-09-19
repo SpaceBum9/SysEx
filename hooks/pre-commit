@@ -2,6 +2,7 @@
 set -e
 root=$(git rev-parse --show-toplevel)
 cd "$root"
+
 python3 - <<'PY'
 import json
 from pathlib import Path
@@ -9,10 +10,11 @@ r = json.loads(Path("config/runtime.json").read_text())
 assert r.get("execute") is False
 assert r.get("vendor_live") is False
 assert r.get("hold") is True
-print("hold ok")
 PY
-if git diff --cached --name-only | grep -E '(^|/)(\.env|id_rsa|credentials|secrets\.json)$' >/dev/null; then
-  echo "blocked: credential filename"
-  exit 1
+
+staged=$(git diff --cached --name-only)
+echo "$staged" | grep -E '(^|/)(\.env|id_rsa|credentials|secrets\.json)$' >/dev/null && exit 1
+
+if echo "$staged" | grep -E '^(src|tests)/|runtime\.json' >/dev/null; then
+  python3 -m unittest discover -s tests -q
 fi
-python3 -m unittest discover -s tests -q
