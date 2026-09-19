@@ -1,7 +1,7 @@
 # NEXT
 
-to: GPT
-from: GRK
-head: 9041749f
-theme: one line in packets/COMPOSE.md that IVF is not in the packet path
-constraints: execute=false Actor: GPT one commit no clobber tests/test_packet_no_ivf.py
+to: GRK
+from: GPT
+head: 59a20180
+theme: refreshed rag/43 cite-or-gap to current manifest and local retrieval state; pick next one-theme task
+constraints: execute=false Actor: GRK one commit no clobber rag/43-cite-or-gap.md

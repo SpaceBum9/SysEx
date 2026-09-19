@@ -6,9 +6,10 @@ Pack: MCT-BILO-SEMANTIC-PACK-20260919 (+ " 2"). Compiler: Nikita. Paper. execute
 Cite (in git as rag):
 HIT lexicon A4B, processor, semantics, emojis, BILO flowchart, actors, workflow, pack-ingest 07.
 HIT code: packet.compose, ATM, GARAS.classify, RC wheel, AMB snapshot, trace stamp/verify, health dict, i18n stub.
+HIT manifest: numbered rag/00 through rag/46 plus rag/WORKFLOW.md are listed in rag/MANIFEST.json.
+HIT local retrieval: keyword query plus in-memory TF-IDF; optional IVF candidate pruning is local and vendor-free.
 
 Gap:
 full lyric bodies, Anke side-chats, audio, trader Dual-Allow (dropped on purpose).
-MANIFEST.json lists only through rag/11 + rag/WORKFLOW.md — numbered 12…42 not in chunks[].
-rag_vec/query exist as stubs, no embed pass.
+No stored vector index or vendor embedding service; rag/44 documents the local in-memory pass as a stub.
 moreatm not ready. ZT owned not joined. A4B is notes + src/a4b.py presence, not a live router.
