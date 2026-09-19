@@ -11,3 +11,4 @@ Do not clobber the other slot's last files; sibling or extend.
 execute=false vendor_live=false hold=true. No secrets. No CD.
 CI = scripts/ci.sh. Delta automation reads push, not this chat.
 Missing trailer or two writers on the same file in the same minute = Unklar=Stopp.
+IVF is rag-only. Packet path is A4B AMB GARAS ATM stamp.
