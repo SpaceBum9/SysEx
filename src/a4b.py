@@ -52,3 +52,7 @@ def route(text: str) -> dict:
         "next": nxt,
         "grok_is_xai": False,
     }
+
+
+def route_many(texts: list[str]) -> list[dict]:
+    return [{"text": text, "route": route(text)} for text in texts]
