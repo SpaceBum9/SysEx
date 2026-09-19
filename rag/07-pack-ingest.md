@@ -1,12 +1,9 @@
-# Pack ingest 2026-09-19
+# Pack ingest
 
-Source zip: MCT-BILO-SEMANTIC-PACK-20260919.zip
-Compiler slot: Nikita (Main Bot / Grok Bot). Paper only. Audio excluded. Trader Dual-Allow dropped.
-GPT project name: MCT-1700021-CMD schrieb. No separate ChatGPT project titled BILO.
-HOST cited: SpaceBum9/MCT-2600027 @ 08a4cfa.
+Pack1: MCT-BILO-SEMANTIC-PACK-20260919.zip (12:47)
+Pack2: same name + " 2" (13:04, ~683k). Compiler slot: Nikita. Paper only. Audio excluded. Trader Dual-Allow dropped.
+GPT project: MCT-1700021-CMD schrieb.
 
-Pass 1 inventory: 00-SOURCES, 01-SEMANTIK, 02-AMBIGUITY, 03-AUTOCORRECT, 04-EMOJIS, 05-BILO-FLOWCHART, pads, raw dumps, frames.
-Pass 2 cut: no audio bytes, no LIVE_RAIL flip, no score-70 invention, no A4B lexicon (unopened), no probabilistic zip, no Dual-Allow, pads not copied wholesale.
-Pass 3 chunks: rag/08-semantik.md rag/02-ambiguity.md rag/09-emojis.md rag/10-bilo-flowchart.md rag/11-autocorrect.md
-
-Drive mirror folder id cited in pack STATUS only. Git remains source of truth for SysEx RAG.
+Pack2 closed previous gaps: A4B lexicon HIT, probabilistic_semantic_processor expanded HIT.
+Still partial: full lyric bodies, Anke side-chats.
+GROK in A4B = internal routing label, not xAI connector.
