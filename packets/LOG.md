@@ -7,3 +7,4 @@ One line per composed answer. Not a transcript.
 | 2026-09-19T13:12+02 | operator | NIKITA | sync | OBSERVE | compose-after-every-answer becomes Pflicht |
 | 2026-09-19T13:13+02 | operator | NIKITA | sync | OBSERVE | compose means git commit on main after every answer |
 | 2026-09-19T13:14+02 | operator | NIKITA | sync | OBSERVE | CI workflow added; CD denied |
+| 2026-09-19T13:16+02 | operator | NIKITA | sync | CREDENTIAL | secrets: CI needs none; values not set via this slot |
