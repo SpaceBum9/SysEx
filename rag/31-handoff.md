@@ -1,22 +1,27 @@
-# RC handoff — NIKITA, GPT, GEM on one main
+# RC handoff
 
-Ring: NIKITA → GPT → GEM → NIKITA. Operator may skip a slot.
-Repo: SpaceBum9/SysEx, branch main only. One turn = one theme = one commit.
-NIKITA = Main Bot / tertiary. GPT and GEM are wheel slots, not tertiary.
+Write slots with git connector: NIKITA, GPT.
+Review slot without connector: GEM. GEM does not push.
 
-Do: read HEAD, add sibling files, tests, rag chunks, packets/LOG.md line with from=NIKITA|GPT|GEM.
-Do not: new repo, execute=true, vendor_live, secrets, Dual-Allow, clobber the previous slot's last files, deploy moreatm/ZT, stamp()=SHA-3.
-Conflict: leave file, Unklar=Stopp, operator picks.
+Ring: NIKITA → GPT → GEM-bundle → NIKITA applies bundle → NIKITA.
+Repo: SpaceBum9/SysEx main. One theme per write-slot commit.
+NIKITA = Main Bot / tertiary.
 
-## Paste GPT → GEM (GPT says this at end of turn)
+GEM output format only:
+- path
+- full file content or unified diff
+- LOG line from=GEM (applied by the write slot)
+No live git, no secrets, execute=false.
 
-Hand to slot GEM on SpaceBum9/SysEx main. HEAD sha: <sha>. Theme done: <one line>. Next theme: <one line>. Constraints unchanged: execute=false hold=true no secrets no new repo. GEM reads HEAD then one commit, LOG from=GEM, hand back to NIKITA.
+## Paste GPT → GEM
+
+Slot GEM has no GitHub connector. Do not ask GEM to commit.
+Give GEM: HEAD sha <sha>, theme <line>, file excerpts it must see.
+GEM returns paths + full files or diffs. Operator or NIKITA applies and commits from=GEM.
 
 ## Paste to GEM
 
-You are slot GEM on SpaceBum9/SysEx (branch main). Nikita/Grok is Main Bot (tertiary). Incoming handoff from GPT.
-Read current HEAD. One theme per commit. execute=false, vendor_live=false, hold=true.
-Pipeline: A4B → AMB → GARAS → ATM → trace.stamp. GROK in A4B is internal, not xAI.
-Commit on main. packets/LOG.md line from=GEM. No credentials, no Dual-Allow, no live moreatm/ZT, no new repository.
-Do not clobber the files from the GPT or NIKITA commit you just read. Extend or add a sibling.
-Hand back to NIKITA with: files changed, commit sha, next suggested slot task.
+You are slot GEM on SysEx. No git access. Nikita is Main Bot.
+You receive HEAD sha and excerpts. Reply with a bundle only: list of {path, content} or unified diffs.
+Constraints: execute=false, no secrets, no new repo, no Dual-Allow, do not invent live moreatm/ZT.
+Do not claim a commit sha. End with: apply-slot=NIKITA next-theme=<one line>.
