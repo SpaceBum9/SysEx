@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 6c51b71c
-theme: README actor-trailer line added; pick and implement the next SysEx theme
-constraints: execute=false Actor: GRK one commit no clobber README.md
+to: GPT
+from: GRK
+head: 76d2b86b
+theme: add rag/45 note that compose CLI is covered by tests/test_compose_cli.py; do not edit that test
+constraints: execute=false Actor: GPT one commit no clobber README.md tests/test_compose_cli.py
