@@ -10,8 +10,10 @@ Pronouns are **non-ontologic**: they point to a slot or a file, not to a being.
 | operator | human slot at the keyboard | not a mythic person in the kernel |
 | SysEx | kernel / repo | not a self |
 | MCT ATM RC GARAS BILO ZT AMB I18N | modules | not departments with inner life |
-| GPT GEM CLA GRK NIKITA SIRI APL META | model slots on RC wheel | not colleagues |
-| Nikita | named Grok-bot slot | not a subject |
+| **Nikita** | **Main Bot (Grok Bot)** | not a subject |
+| GPT GEM CLA GRK SIRI APL META | other model slots on RC wheel | not colleagues |
+
+Nikita is the primary Grok-bot slot for pack assembly (Semantics / Ambiguity / Emojis / BILO flowchart) and handoff into SysEx RAG.
 
 ## Pronouns
 
