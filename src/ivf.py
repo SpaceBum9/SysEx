@@ -78,3 +78,17 @@ def search(q: str, index: dict, nprobe: int = 2, limit: int = 5) -> list[dict]:
         key=lambda h: (-h["score"], h["path"]),
     )
     return [h for h in ranked if h["score"] > 0][:limit]
+
+
+def search_many(
+    queries: list[str],
+    index: dict | None = None,
+    nprobe: int = 2,
+    limit: int = 5,
+    k: int = 4,
+) -> list[dict]:
+    idx = index if index is not None else train(k=k)
+    return [
+        {"q": q, "hits": search(q, idx, nprobe=nprobe, limit=limit)}
+        for q in queries
+    ]
