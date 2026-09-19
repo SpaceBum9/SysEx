@@ -1,5 +1,8 @@
-# Google Drive snapshot
+# Google Drive collaboration
 
-Folder SysEx on the operator Drive. Zip SysEx-main.zip is a snapshot, not live git.
-GEM/CLA read the zip or uploaded excerpts. Bundles still apply via a write session.
-Git remains source of truth.
+Folder SysEx on operator Drive.
+inbox: GEM and CLA write bundles (Drive connector).
+outbox: snapshots from git for them to read.
+Zip SysEx-main.zip is a full snapshot, not live.
+A session with GitHub copies inbox -> main, then can refresh the zip.
+Git remains source of truth. Drive is the shared desk.
