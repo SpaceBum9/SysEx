@@ -18,6 +18,13 @@ class PacketTests(unittest.TestCase):
         self.assertEqual(p["garas"]["intent_class"], "OBSERVE")
         self.assertEqual(p["atm"]["status"], "accepted")
 
+    def test_bilo_scan_is_in_packet(self) -> None:
+        p = compose("hold GARAS execute", verb="sync")
+        tokens = {row["token"] for row in p["bilo"]}
+        self.assertIn("HOLD", tokens)
+        self.assertIn("GARAS", tokens)
+        self.assertTrue(all(row["claims_external_state"] is False for row in p["bilo"]))
+
     def test_execute_denied(self) -> None:
         p = compose("go", verb="execute")
         self.assertEqual(p["garas"]["decision"], "deny")
