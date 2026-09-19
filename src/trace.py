@@ -11,14 +11,18 @@ PREFIX = "TR-"
 FNV64_OFFSET = 0xCBF29CE484222325
 FNV64_PRIME = 0x100000001B3
 
-# Fields that must not enter the hashed body (self-reference / correlation only).
 EXCLUDE_FROM_HASH = frozenset(
-    {"content_sha256", "trace_id", "chain_fnv"}
+    {
+        "content_sha256",
+        "trace_id",
+        "chain_fnv",
+        "chain_fnv_collision_resistant",
+        "trace_verify",
+    }
 )
 
 
 def new_trace_id() -> str:
-    """Random id. MUST NOT be derived from anchor text or packet body."""
     return PREFIX + secrets.token_hex(8)
 
 
@@ -53,11 +57,9 @@ def stamp(packet: dict[str, Any], prev: str | None = None) -> dict[str, Any]:
     out["prev"] = prev
     out["execute"] = False
     out["trace_id"] = new_trace_id()
-    out["content_sha256"] = content_sha256(out)
-    out["chain_fnv"] = fnv1a_64(
-        f"{prev or ''}|{out['trace_id']}".encode("utf-8")
-    )
+    out["chain_fnv"] = fnv1a_64(f"{prev or ''}|{out['trace_id']}".encode("utf-8"))
     out["chain_fnv_collision_resistant"] = False
+    out["content_sha256"] = content_sha256(out)
     return out
 
 
