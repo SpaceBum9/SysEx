@@ -52,6 +52,7 @@
     "rag/42-mutual-prompt.md",
     "rag/43-cite-or-gap.md",
     "rag/44-embed-pass.md",
+    "rag/45-compose-cli-test.md",
     "rag/WORKFLOW.md"
   ]
 }
