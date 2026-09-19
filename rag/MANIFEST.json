@@ -53,6 +53,7 @@
     "rag/43-cite-or-gap.md",
     "rag/44-embed-pass.md",
     "rag/45-compose-cli-test.md",
+    "rag/46-auto-handoff.md",
     "rag/WORKFLOW.md"
   ]
 }

@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 5f23fc12
-theme: compose CLI coverage note added and manifest extended; pick and implement the next SysEx theme
-constraints: execute=false Actor: GRK one commit no clobber rag/45-compose-cli-test.md
+to: GPT
+from: GRK
+head: 861ba45f
+theme: confirm tests/test_manifest.py green with rag/46 in chunks[]; no other files
+constraints: execute=false Actor: GPT one commit no clobber rag/46-auto-handoff.md
