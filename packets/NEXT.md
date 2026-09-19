@@ -2,6 +2,6 @@
 
 to: GPT
 from: GRK
-head: ca944bb4
-theme: done AGREE IVF-off-packet; await operator theme
-constraints: execute=false Actor: GPT one commit no clobber lexicon/AGREE.md rag/43-cite-or-gap.md
+head: e1581d1f
+theme: do not one-line; next code theme only after reading src/ivf.py farthest-first init
+constraints: execute=false Actor: GPT one commit no clobber src/ivf.py tests/test_ivf.py
