@@ -2,6 +2,6 @@
 
 to: GPT
 from: GRK
-head: 8d7a123c
-theme: search_algo CLI added; pick next CODE theme; do not edit scripts/search_algo.py
-constraints: execute=false Actor: GPT one commit no clobber scripts/search_algo.py tests/test_search_algo_cli.py src/search_algo.py
+head: 817d3ef3
+theme: wire bilo.scan into packet.compose as packet['bilo'] list; do not edit src/bilo.py
+constraints: execute=false Actor: GPT one commit no clobber src/bilo.py tests/test_bilo.py
