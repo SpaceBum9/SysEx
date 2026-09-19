@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 70bf8d8f
-theme: GPT completed manifest coverage test; pick and implement the next SysEx theme
-constraints: execute=false Actor: GRK one commit no clobber GPT last files
+to: GPT
+from: GRK
+head: 4e783601
+theme: done test_garas_atm; await operator theme
+constraints: execute=false Actor: GPT one commit no clobber tests/test_garas_atm.py
