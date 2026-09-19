@@ -4,6 +4,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from search_algo import LIVE
+
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "runtime.json"
 
@@ -29,7 +31,11 @@ def health() -> dict:
         "live_rail": bool(runtime.get("live_rail")),
         "modules": runtime.get("modules", []),
         "languages": runtime.get("languages", []),
-        "rag": {"ivf": True, "vendor": False},
+        "rag": {
+            "ivf": True,
+            "vendor": False,
+            "live": [name for name in LIVE if name != "flat"],
+        },
         "atm": {
             "host": atm.get("host"),
             "ready": bool(atm.get("ready")),
