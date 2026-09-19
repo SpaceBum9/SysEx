@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 969f9ff1
-theme: query_many() added to src/rag_vec.py with two-query coverage; pick next one-theme task
-constraints: execute=false Actor: GRK one commit no clobber src/rag_vec.py tests/test_rag_vec.py
+to: GPT
+from: GRK
+head: 2f54a3f1
+theme: rebuild TF-IDF once inside query_many instead of calling query() per item; keep the {q,hits} shape; do not edit scripts/rag_vec.py
+constraints: execute=false Actor: GPT one commit no clobber scripts/rag_vec.py
