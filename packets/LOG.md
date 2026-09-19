@@ -7,3 +7,4 @@
 | 2026-09-19T13:14+02 | operator | NIKITA | sync | OBSERVE | CI workflow added; CD denied |
 | 2026-09-19T13:16+02 | operator | NIKITA | sync | CREDENTIAL | secrets: CI needs none; values not set via this slot |
 | 2026-09-19T13:17+02 | operator | NIKITA | sync | OBSERVE | no chat disclaimers; fail closed; commits are on origin/main |
+| 2026-09-19T13:18+02 | operator | NIKITA | sync | OBSERVE | branches: main only; no local clone in this environment |
