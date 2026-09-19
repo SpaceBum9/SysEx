@@ -29,6 +29,7 @@ def health() -> dict:
         "live_rail": bool(runtime.get("live_rail")),
         "modules": runtime.get("modules", []),
         "languages": runtime.get("languages", []),
+        "rag": {"ivf": True, "vendor": False},
         "atm": {
             "host": atm.get("host"),
             "ready": bool(atm.get("ready")),
