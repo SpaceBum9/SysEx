@@ -12,6 +12,14 @@ LABELS = {
 }
 
 
+def _table(lang: str) -> dict[str, str]:
+    return LABELS.get(lang) or LABELS["en"]
+
+
 def t(key: str, lang: str = "de") -> str:
-    table = LABELS.get(lang) or LABELS["en"]
-    return table.get(key, key)
+    return _table(lang).get(key, key)
+
+
+def translate_many(keys: list[str], lang: str = "de") -> list[dict]:
+    table = _table(lang)
+    return [{"key": key, "value": table.get(key, key)} for key in keys]
