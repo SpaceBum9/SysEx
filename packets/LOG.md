@@ -9,3 +9,4 @@
 | 2026-09-19T13:17+02 | operator | NIKITA | sync | OBSERVE | no chat disclaimers; fail closed; commits are on origin/main |
 | 2026-09-19T13:18+02 | operator | NIKITA | sync | OBSERVE | branches: main only; no local clone in this environment |
 | 2026-09-19T13:20+02 | operator | NIKITA | sync | OBSERVE | client pre-commit hook + install-hooks.sh |
+| 2026-09-19T13:21+02 | operator | NIKITA | sync | OBSERVE | husky 9 + .husky/pre-commit |

@@ -1,0 +1,11 @@
+{
+  "name": "sysex",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "test": "python3 -m unittest discover -s tests -q"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
