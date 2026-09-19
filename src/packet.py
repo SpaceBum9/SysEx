@@ -1,7 +1,8 @@
-"""SysEx packet: envelope + A4B/AMB + GARAS + ATM + trace."""
+"""SysEx packet: A4B + AMB + GARAS + ATM + trace."""
 
 from __future__ import annotations
 
+from a4b import route as a4b_route
 from ambiguity import snapshot
 from atm import handle as atm_handle
 from garas import decide as garas_decide
@@ -17,6 +18,7 @@ def compose(
     prev: str | None = None,
     slot_index: int = 0,
 ) -> dict:
+    a4b = a4b_route(text)
     amb = snapshot(text, lang)
     policy = garas_decide(f"{verb} {text}")
     atm = atm_handle(verb)
@@ -29,6 +31,7 @@ def compose(
         "lang": lang,
         "verb": verb,
         "text": text,
+        "a4b": a4b,
         "amb": amb,
         "garas": policy,
         "atm": atm,
