@@ -36,8 +36,11 @@ def health() -> dict:
         },
         "zero_tier": {
             "needed": bool(zt.get("needed")),
+            "owned": bool(zt.get("owned")),
             "joined": bool(zt.get("joined")),
+            "ready": bool(zt.get("ready")),
             "network_id_present": zt.get("network_id") is not None,
+            "reason": zt.get("reason"),
         },
     }
 

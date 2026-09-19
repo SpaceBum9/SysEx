@@ -19,9 +19,13 @@
   },
   "zero_tier": {
     "needed": true,
+    "owned": true,
     "joined": false,
+    "ready": false,
     "network_id": null,
-    "note": "network id stays local, never in git"
+    "id_suffix": "bbbb",
+    "reason": "owned_not_ready_like_moreatm",
+    "note": "full network id stays local, never in git"
   },
   "languages": ["de", "en", "fr", "pl", "ko", "gs"]
 }

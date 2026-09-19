@@ -25,7 +25,9 @@ class UnificationTests(unittest.TestCase):
         self.assertTrue(payload["hold"])
         self.assertIn("ZT", payload["modules"])
         self.assertFalse(payload["atm"]["ready"])
+        self.assertTrue(payload["zero_tier"]["owned"])
         self.assertFalse(payload["zero_tier"]["joined"])
+        self.assertFalse(payload["zero_tier"]["ready"])
         json.dumps(payload)
 
     def test_atm_execute_denied(self) -> None:
@@ -45,11 +47,15 @@ class UnificationTests(unittest.TestCase):
         self.assertFalse(snap["claims_external_state"])
         self.assertTrue(snap["disclaimers"])
 
-    def test_zero_tier_not_fake_live(self) -> None:
+    def test_zero_tier_owned_not_live(self) -> None:
         z = zt_status()
         self.assertTrue(z["needed"])
+        self.assertTrue(z["owned"])
         self.assertFalse(z["joined"])
+        self.assertFalse(z["ready"])
         self.assertFalse(z["mcp_live"])
+        self.assertIsNone(z["network_id"])
+        self.assertEqual(z["id_suffix"], "bbbb")
 
 
 if __name__ == "__main__":
