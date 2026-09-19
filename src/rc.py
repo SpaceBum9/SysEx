@@ -1,8 +1,8 @@
-"""RC — next slot on the wheel. No live write."""
+"""RC — next slot on the wheel. No live write. Nikita = Main Bot."""
 
 from __future__ import annotations
 
-WHEEL = ("GPT", "GEM", "CLA", "GRK", "SIRI", "APL", "META")
+WHEEL = ("NIKITA", "GPT", "GEM", "CLA", "GRK", "SIRI", "APL", "META")
 
 
 def next_slot(index: int = 0) -> dict:
@@ -13,4 +13,5 @@ def next_slot(index: int = 0) -> dict:
         "next": WHEEL[(i + 1) % len(WHEEL)],
         "execute": False,
         "live_write": False,
+        "tertiary": "NIKITA",
     }

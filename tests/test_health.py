@@ -39,7 +39,7 @@ class UnificationTests(unittest.TestCase):
         self.assertEqual(decide("read health")["decision"], "allow")
 
     def test_rc_and_i18n(self) -> None:
-        self.assertEqual(next_slot(0)["slot"], "GPT")
+        self.assertEqual(next_slot(0)["slot"], "NIKITA")
         self.assertEqual(t("hold", "de"), "Halten")
 
     def test_ambiguity_no_external_fact(self) -> None:
