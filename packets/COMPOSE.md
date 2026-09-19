@@ -5,3 +5,5 @@ That push is the commit. No local-only draft counts as compose.
 Minimum payload: one new line in packets/LOG.md.
 Durable rules go to rag/, lexicon/, or src/ in the same commit when they exist.
 execute false. No credentials. No network ids. No full transcripts.
+
+IVF is not in the packet path; it remains a local RAG selection concern and is not a packet field.
