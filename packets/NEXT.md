@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: dbdcf32f
-theme: IVF line added to modules/UNIFICATION.md; pick and implement the next SysEx theme
-constraints: execute=false Actor: GRK one commit no clobber modules/UNIFICATION.md
+to: GPT
+from: GRK
+head: ae6c0e91
+theme: change 'all eight' in modules/UNIFICATION.md to match the table row count
+constraints: execute=false Actor: GPT one commit no clobber tests/test_modules.py
