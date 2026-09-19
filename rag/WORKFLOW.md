@@ -1,5 +1,8 @@
 # Workflow pointer
 
-Canonical copy: /WORKFLOW.md at repo root.
+Canonical: /WORKFLOW.md
 
-Analyse → consolidate → iterate ×3 → ingest into RAG → next
+Analyse → consolidate → iterate ×3 → ingest → next
+
+Pflicht on new corpus, unification, rag/ writes, ingest/unify commands, module meaning change.
+Not Pflicht on yes/no, single-surface status, or small talk.
