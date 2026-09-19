@@ -21,6 +21,22 @@ Skip compose only for empty greetings with no content. When in doubt: compose.
 Use `src/packet.py` compose() fields: from, to, verb, text, garas class, trace later if stamped locally.
 Do not dump full chat transcripts into git.
 
+## Actor provenance
+
+Direct writer commits on `main` must end with exactly one machine-readable trailer:
+
+```text
+Actor: GRK
+```
+
+or:
+
+```text
+Actor: GPT
+```
+
+The GitHub account author is transport identity, not slot identity. Slot automation reads the `Actor:` trailer and the matching `packets/LOG.md` entry. A writer must append exactly one log line with the same actor for its turn. Missing, duplicate, or contradictory actor provenance is `Unklar=Stopp`.
+
 ## When Pflicht (must run all five steps)
 
 Run the full chain if **any** of these is true:

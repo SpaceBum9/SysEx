@@ -11,3 +11,9 @@ assert r.get("hold") is True
 print("hold ok")
 PY
 python3 -m unittest discover -s tests -v
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ "${GITHUB_EVENT_NAME:-}" != "pull_request" ]; then
+  msg=$(git log -1 --pretty=%B)
+  actor_count=$(printf '%s\n' "$msg" | grep -Ec '^Actor: (GRK|GPT)$' || true)
+  test "$actor_count" -eq 1
+  echo "actor trailer ok"
+fi
