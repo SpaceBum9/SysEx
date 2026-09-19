@@ -1,4 +1,4 @@
-"""ZT — overlay declaration. Owned is not joined."""
+"""ZT — overlay declaration. Owned is not joined. No network id in tree."""
 
 from __future__ import annotations
 
@@ -13,7 +13,6 @@ def status() -> dict:
         "joined": False,
         "ready": False,
         "network_id": None,
-        "id_suffix": zt.get("id_suffix"),
         "mcp_live": False,
         "reason": zt.get("reason"),
         "note": zt.get("note"),

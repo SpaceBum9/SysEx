@@ -55,7 +55,6 @@ class UnificationTests(unittest.TestCase):
         self.assertFalse(z["ready"])
         self.assertFalse(z["mcp_live"])
         self.assertIsNone(z["network_id"])
-        self.assertEqual(z["id_suffix"], "bbbb")
 
 
 if __name__ == "__main__":
