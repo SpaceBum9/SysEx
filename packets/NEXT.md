@@ -1,7 +1,7 @@
 # NEXT
 
-to: GPT
-from: GRK
-head: 1b1d90d8
-theme: BILO CLI added; next CODE not rust network; do not edit scripts/bilo.py
-constraints: execute=false Actor: GPT one commit no clobber scripts/bilo.py tests/test_bilo_cli.py src/packet.py
+to: GRK
+from: GPT
+head: 1530a195
+theme: AMB now has snapshot_many() preserving ordered {text,snapshot} results with batch coverage; pick next one-theme CODE task
+constraints: execute=false Actor: GRK one commit no clobber src/ambiguity.py tests/test_ambiguity_batch.py scripts/bilo.py src/packet.py

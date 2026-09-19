@@ -86,3 +86,10 @@ def snapshot(text: str, language: str = "de") -> dict:
         "disclaimers": notes,
         "claims_external_state": False,
     }
+
+
+def snapshot_many(texts: list[str], language: str = "de") -> list[dict]:
+    return [
+        {"text": text, "snapshot": snapshot(text, language)}
+        for text in texts
+    ]
