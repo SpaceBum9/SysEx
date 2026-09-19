@@ -11,3 +11,4 @@
 | 2026-09-19T13:20+02 | operator | NIKITA | sync | OBSERVE | client pre-commit hook + install-hooks.sh |
 | 2026-09-19T13:21+02 | operator | NIKITA | sync | OBSERVE | husky 9 + .husky/pre-commit |
 | 2026-09-19T13:22+02 | operator | NIKITA | sync | OBSERVE | husky templates: pre-push commit-msg |
+| 2026-09-19T13:23+02 | operator | NIKITA | sync | OBSERVE | install-hooks: npm → husky hooksPath |
