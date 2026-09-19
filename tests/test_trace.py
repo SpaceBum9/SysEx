@@ -5,10 +5,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from trace import content_sha256, is_trace_id, stamp, verify  # noqa: E402
+from trace import content_sha256, fnv1a_64, is_trace_id, stamp, verify  # noqa: E402
 
 
 class TraceTests(unittest.TestCase):
+    def test_fnv_vectors(self) -> None:
+        self.assertEqual(fnv1a_64(b""), "cbf29ce484222325")
+        self.assertEqual(fnv1a_64(b"a"), "af63dc4c8601ec8c")
+        self.assertEqual(fnv1a_64(b"foobar"), "85944171f73967e8")
+
     def test_id_not_from_body(self) -> None:
         a = stamp({"text": "hallo", "verb": "sync"})
         b = stamp({"text": "hallo", "verb": "sync"})
