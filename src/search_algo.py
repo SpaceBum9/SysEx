@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from ivf import search, train
-from rag_vec import query
+from ivf import search, search_many, train
+from rag_vec import query, query_many
 
 KNOWN = ("brute", "ivf", "hnsw", "lsh", "pq", "scann", "flat")
 LIVE = ("brute", "ivf", "flat")
@@ -25,3 +25,10 @@ def run(name: str, q: str, limit: int = 5) -> list[dict]:
     if algo == "ivf":
         return search(q, train(), limit=limit)
     return query(q, limit=limit)
+
+
+def run_many(name: str, queries: list[str], limit: int = 5) -> list[dict]:
+    algo = pick(name)
+    if algo == "ivf":
+        return search_many(queries, limit=limit)
+    return query_many(queries, limit=limit)
