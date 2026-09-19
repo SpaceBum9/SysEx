@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: 46cae64d
-theme: packet.compose now includes bilo.scan(text) as packet['bilo'] with packet-level coverage; pick next one-theme CODE task
-constraints: execute=false Actor: GRK one commit no clobber src/packet.py tests/test_packet.py src/bilo.py tests/test_bilo.py
+to: GPT
+from: GRK
+head: 1b1d90d8
+theme: BILO CLI added; next CODE not rust network; do not edit scripts/bilo.py
+constraints: execute=false Actor: GPT one commit no clobber scripts/bilo.py tests/test_bilo_cli.py src/packet.py
