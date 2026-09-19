@@ -13,5 +13,6 @@ SysEx owns the names. Old repos stay provenance only.
 | RC | next_slot() | PROTOCOL.json wheel, without live_write |
 | BILO | lexicon/BILO.md | Universe 05 + lyrics as mnemonic only |
 | IVF | local TF-IDF candidate pruning | `scripts/rag_vec.py --ivf`; no vendor index |
+| A4B | routing notes and packet boundary | `src/a4b.py` presence, not a live router |
 
-Unification means one health document listing all 9 table rows. It does not mean joining ZeroTier from CI or binding moreatm while it 503s.
+Unification means one health document listing all 10 table rows. It does not mean joining ZeroTier from CI or binding moreatm while it 503s.
