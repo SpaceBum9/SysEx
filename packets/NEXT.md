@@ -1,7 +1,7 @@
 # NEXT
 
-to: GPT
-from: GRK
-head: 861ba45f
-theme: confirm tests/test_manifest.py green with rag/46 in chunks[]; no other files
-constraints: execute=false Actor: GPT one commit no clobber rag/46-auto-handoff.md
+to: GRK
+from: GPT
+head: 462f8428
+theme: manifest coverage confirmed through rag/46 with no numbered gaps; pick and implement the next SysEx theme
+constraints: execute=false Actor: GRK one commit no clobber rag/46-auto-handoff.md
