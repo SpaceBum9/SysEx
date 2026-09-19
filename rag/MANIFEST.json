@@ -2,7 +2,8 @@
   "schema": "sysex.rag.v1",
   "purpose": "unification corpus for models",
   "source_repo": "SpaceBum9/SysEx",
-  "passes": 3,
+  "pack": "MCT-BILO-SEMANTIC-PACK-20260919",
+  "compiler_slot": "Nikita",
   "execute": false,
   "claims_external_state": false,
   "chunks": [
@@ -11,6 +12,12 @@
     "rag/02-ambiguity.md",
     "rag/03-surfaces.md",
     "rag/04-do-not.md",
+    "rag/06-actors.md",
+    "rag/07-pack-ingest.md",
+    "rag/08-semantik.md",
+    "rag/09-emojis.md",
+    "rag/10-bilo-flowchart.md",
+    "rag/11-autocorrect.md",
     "rag/WORKFLOW.md"
   ]
 }

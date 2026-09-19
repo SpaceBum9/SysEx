@@ -1,10 +1,13 @@
 # Ambiguity for SysEx RAG
 
+UNSCHÄRFE is a generative possibility space, not mere error.
+Unklar = Stopp. Filling the gap is how paper becomes fiction (CARE pad).
 Do not treat labels as facts.
-Pipeline: utterance -> AMB.snapshot -> unresolved stays open -> GARAS.decide -> resolve only if an ATM verb needs it -> persist only with evidence.
-Health and technical and speculative tokens require evidence.
-Lyric or metaphor tokens stay speculative. Do not write them into runtime state.
-Underspecification is allowed. Do not invent a finish.
+Pipeline: utterance → AMB.snapshot → unresolved stays open → GARAS.decide → resolve only if an ATM verb needs it → persist only with evidence.
+Health technical speculative tokens require evidence.
+Lyric or metaphor tokens stay speculative.
 If two readings remain, RC may ask the next slot. RC may not execute.
-Bos levels used here: underspecify, resolve, infer — shrunk to AMB then GARAS then ATM.
-Source-grounding alone is not enough; authority must pick which reading may dominate.
+Status values seen in GPT chats: valid | ambiguous | invalid.
+claims_external_state stays false.
+SEMANTIC status of many emoji tokens := UNRESOLVED. 👍 is context-dependent.
+Hard wall: if a sentence answers how to RUN this → cut. If it answers how to RECOGNIZE this → keep.
