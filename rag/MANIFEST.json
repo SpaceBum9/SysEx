@@ -12,6 +12,7 @@
     "rag/02-ambiguity.md",
     "rag/03-surfaces.md",
     "rag/04-do-not.md",
+    "rag/05-trace.md",
     "rag/06-actors.md",
     "rag/07-pack-ingest.md",
     "rag/08-semantik.md",
@@ -50,6 +51,7 @@
     "rag/41-gitlab-flow.md",
     "rag/42-mutual-prompt.md",
     "rag/43-cite-or-gap.md",
+    "rag/44-embed-pass.md",
     "rag/WORKFLOW.md"
   ]
 }
