@@ -10,3 +10,4 @@
 | 2026-09-19T13:18+02 | operator | NIKITA | sync | OBSERVE | branches: main only; no local clone in this environment |
 | 2026-09-19T13:20+02 | operator | NIKITA | sync | OBSERVE | client pre-commit hook + install-hooks.sh |
 | 2026-09-19T13:21+02 | operator | NIKITA | sync | OBSERVE | husky 9 + .husky/pre-commit |
+| 2026-09-19T13:22+02 | operator | NIKITA | sync | OBSERVE | husky templates: pre-push commit-msg |
