@@ -14,3 +14,4 @@
 | 2026-09-19T13:23+02 | operator | NIKITA | sync | OBSERVE | install-hooks: npm → husky hooksPath |
 | 2026-09-19T13:24+02 | operator | NIKITA | sync | OBSERVE | pre-commit: tests only if src/tests/runtime staged |
 | 2026-09-19T13:25+02 | operator | NIKITA | sync | OBSERVE | CI+hooks share scripts/ci.sh; no CD |
+| 2026-09-19T13:35+02 | GPT | NIKITA | sync | OBSERVE | runtime health advertises A4B; execute=false vendor_live=false hold=true |
