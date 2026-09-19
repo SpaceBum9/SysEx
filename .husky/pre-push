@@ -1,1 +1,2 @@
-sh hooks/pre-commit
+#!/usr/bin/env sh
+sh scripts/ci.sh
