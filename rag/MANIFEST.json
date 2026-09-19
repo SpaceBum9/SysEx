@@ -1,0 +1,16 @@
+{
+  "schema": "sysex.rag.v1",
+  "purpose": "unification corpus for models",
+  "source_repo": "SpaceBum9/SysEx",
+  "passes": 3,
+  "execute": false,
+  "claims_external_state": false,
+  "chunks": [
+    "rag/00-kernel.md",
+    "rag/01-modules.md",
+    "rag/02-ambiguity.md",
+    "rag/03-surfaces.md",
+    "rag/04-do-not.md",
+    "rag/WORKFLOW.md"
+  ]
+}
