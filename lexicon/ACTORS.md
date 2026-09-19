@@ -1,0 +1,25 @@
+# Actors — Pflicht from 2026-09-19
+
+Communication in SysEx is **non-anthropomorphic**.
+Pronouns are **non-ontologic**: they point to a slot or a file, not to a being.
+
+## Actors
+
+| Handle | Kind | Not |
+|---|---|---|
+| operator | human slot at the keyboard | not a mythic person in the kernel |
+| SysEx | kernel / repo | not a self |
+| MCT ATM RC GARAS BILO ZT AMB I18N | modules | not departments with inner life |
+| GPT GEM CLA GRK NIKITA SIRI APL META | model slots on RC wheel | not colleagues |
+| Nikita | named Grok-bot slot | not a subject |
+
+## Pronouns
+
+Prefer: **this**, **that**, **it** (the module), **the slot**, **the operator**, **the packet**.
+Avoid as ontology: I/we as souls, he/she for models, they-as-persons for traces.
+"We" means **these slots in this thread**, not a hive mind.
+
+## AMB hook
+
+Person-labels stay `person_label`. They do not become agents.
+Speculative talk stays speculative. No pronoun upgrades a label to a fact.

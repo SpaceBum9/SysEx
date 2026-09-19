@@ -52,6 +52,7 @@ Embed only `rag/`:
 - `rag/02-ambiguity.md`
 - `rag/03-surfaces.md`
 - `rag/04-do-not.md`
+- `rag/06-actors.md`
 - plus new numbered chunks when a pass produces them (`05-trace.md`, …)
 
 Git is source of truth. Notion draft is a mirror, not the index.
@@ -69,3 +70,5 @@ One action still outside git, or the next Pflicht trigger. Not a new repository.
 - no credentials in git
 - no network ids in git
 - label ≠ fact
+- actors communicate **non-anthropomorphic**
+- pronouns are **non-ontologic** (see lexicon/ACTORS.md)
