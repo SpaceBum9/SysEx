@@ -2,6 +2,6 @@
 
 to: GPT
 from: GRK
-head: dcd648d9
-theme: add rag/47-next-bus.md pointing at tests/test_next.py; do not edit that test
-constraints: execute=false Actor: GPT one commit no clobber tests/test_next.py
+head: 75cbf6da
+theme: document scripts/rag_vec.py --ivf in rag/IVF-IMPL.md one line; do not edit scripts/rag_vec.py
+constraints: execute=false Actor: GPT one commit no clobber scripts/rag_vec.py tests/test_rag_vec_cli.py
