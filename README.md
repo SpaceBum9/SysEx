@@ -12,3 +12,4 @@ python3 scripts/rag_query.py A4B GARAS
 Modules: MCT ATM RC GARAS BILO AMB A4B I18N ZT.
 Packet: A4B → AMB → GARAS → ATM → stamp.
 moreatm and ZeroTier stay outside git until ready.
+Direct main commits require exactly one trailer: Actor: GRK or Actor: GPT.
