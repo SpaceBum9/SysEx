@@ -1,24 +1,20 @@
 # Actor flowchart
 
-Daily ring does not include NIKITA.
+Label ≠ path. Write vs bundle is decided by whether that session has a GitHub connector.
 
 ```mermaid
 flowchart TD
   OP[Operator] --> Q{theme}
-  Q --> GRK[GRK write if connector]
-  Q --> GPT[GPT write if connector]
-  Q --> GEM[GEM bundle]
-  Q --> CLA[CLA write or bundle]
-  GRK --> GIT[main commit]
-  GPT --> GIT
-  CLA -->|connector| GIT
-  CLA -->|no connector| B[bundle]
-  GEM --> B
+  Q --> S[GRK / GPT / GEM / CLA]
+  S --> C{GitHub connector in this session}
+  C -->|yes| GIT[commit main]
+  C -->|no| B[bundle paths + files]
   B --> W{who can push}
-  W -->|GPT or GRK| GIT
-  W -->|conflict execute hold Dual-Allow| NIK[NIKITA escalate]
-  GIT --> OP
+  W -->|session with connector or Operator| GIT
+  W -->|conflict execute hold secrets| NIK[NIKITA escalate]
   NIK --> GIT
+  GIT --> OP
 ```
 
-NIKITA only: apply when no writer is online, file conflict, execute/hold/secrets, Unklar=Stopp.
+GEM: no connector observed. CLA: no connector in the last bundle. This Grok chat session: connector present.
+NIKITA only on escalate.
