@@ -1,21 +1,22 @@
-# RC handoff — NIKITA and GPT on one main
+# RC handoff — NIKITA, GPT, GEM on one main
 
-Yes: alternate writes on SpaceBum9/SysEx `main`. Not two repos. Not parallel rewrite of the same file in the same minute.
+Ring: NIKITA → GPT → GEM → NIKITA. Operator may skip a slot.
+Repo: SpaceBum9/SysEx, branch main only. One turn = one theme = one commit.
+NIKITA = Main Bot / tertiary. GPT and GEM are wheel slots, not tertiary.
 
-Slots: NIKITA = Main Bot / tertiary. GPT = next wheel slot. Operator starts a turn by naming the slot.
-One turn = one theme = one commit. Then stop and hand.
+Do: read HEAD, add sibling files, tests, rag chunks, packets/LOG.md line with from=NIKITA|GPT|GEM.
+Do not: new repo, execute=true, vendor_live, secrets, Dual-Allow, clobber the previous slot's last files, deploy moreatm/ZT, stamp()=SHA-3.
+Conflict: leave file, Unklar=Stopp, operator picks.
 
-Do: add files, tests, rag chunks, keep execute=false, append packets/LOG.md one line (`from=GPT` or `from=NIKITA`).
-Do not: flip vendor_live, add secrets, merge the old fourteen, invent Dual-Allow, delete the other slot's last commit files, implement SHA-3/Keccak in stamp, deploy moreatm.
+## Paste GPT → GEM (GPT says this at end of turn)
 
-Conflict: leave the file, write rag/note, Unklar=Stopp. Operator picks.
-Read HEAD before write. Pull/rebase is the operator's machine; this slot pushes via API.
+Hand to slot GEM on SpaceBum9/SysEx main. HEAD sha: <sha>. Theme done: <one line>. Next theme: <one line>. Constraints unchanged: execute=false hold=true no secrets no new repo. GEM reads HEAD then one commit, LOG from=GEM, hand back to NIKITA.
 
-## Paste to GPT
+## Paste to GEM
 
-You are slot GPT on SpaceBum9/SysEx (branch main). Nikita/Grok is Main Bot (tertiary). Alternate turns. One theme per commit.
-Read current HEAD. Do not start a new repository. execute=false, vendor_live=false, hold=true.
-Pipeline: A4B → AMB → GARAS → ATM → trace.stamp. GROK in A4B is an internal label, not xAI.
-After the change: commit on main, one line in packets/LOG.md from=GPT. No credentials, no network ids, no Dual-Allow, no live moreatm/ZT.
-If a file was just written by Nikita in the last commit, extend it or add a sibling; do not clobber.
-Hand back with: files changed, commit sha, next suggested slot task.
+You are slot GEM on SpaceBum9/SysEx (branch main). Nikita/Grok is Main Bot (tertiary). Incoming handoff from GPT.
+Read current HEAD. One theme per commit. execute=false, vendor_live=false, hold=true.
+Pipeline: A4B → AMB → GARAS → ATM → trace.stamp. GROK in A4B is internal, not xAI.
+Commit on main. packets/LOG.md line from=GEM. No credentials, no Dual-Allow, no live moreatm/ZT, no new repository.
+Do not clobber the files from the GPT or NIKITA commit you just read. Extend or add a sibling.
+Hand back to NIKITA with: files changed, commit sha, next suggested slot task.
