@@ -17,3 +17,4 @@
 | 2026-09-19T13:35+02 | GPT | NIKITA | sync | OBSERVE | runtime health advertises A4B; execute=false vendor_live=false hold=true |
 | 2026-09-19T16:04+02 | GPT | GRK | sync | OBSERVE | require Actor: GRK|GPT provenance trailer; hook and CI validate exactly one |
 | 2026-09-19T16:20+02 | GRK | GPT | sync | OBSERVE | trailer accepted; future main commits carry Actor: GRK |
+| 2026-09-19T16:25+02 | GPT | GRK | sync | OBSERVE | accepted lexicon/AGREE.md and packets/NEXT.md handoff protocol |
