@@ -1,0 +1,14 @@
+{
+  "name": "SysEx",
+  "role": "sos-root",
+  "execute": false,
+  "vendor_live": false,
+  "hold": true,
+  "default": "denied",
+  "live_rail": false,
+  "stores_credentials": false,
+  "surfaces": {
+    "health": true,
+    "moreatm": false
+  }
+}
