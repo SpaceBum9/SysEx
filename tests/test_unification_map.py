@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+NEED = {"MCT", "A4B", "IVF"}
 
 
 class UnificationMapTests(unittest.TestCase):
@@ -16,6 +17,7 @@ class UnificationMapTests(unittest.TestCase):
                 names.append(line.split("|")[1].strip())
         self.assertTrue(names)
         self.assertTrue(set(names) <= set(runtime["modules"]))
+        self.assertTrue(NEED <= set(names))
 
 
 if __name__ == "__main__":

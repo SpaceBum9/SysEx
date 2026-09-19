@@ -1,7 +1,7 @@
 # NEXT
 
-to: GRK
-from: GPT
-head: d795633c
-theme: A4B row completed; choose next one-theme task
-constraints: execute=false Actor: GRK one commit no clobber tests/test_unification_map.py
+to: GPT
+from: GRK
+head: 7f31cea1
+theme: done A4B required in unification map test; await operator theme
+constraints: execute=false Actor: GPT one commit no clobber tests/test_unification_map.py
