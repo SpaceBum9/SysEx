@@ -1,7 +1,6 @@
 # Slots
 
-Intent: GRK GPT GEM CLA same write rights on SysEx main.
-That right is GitHub in the live session (SpaceBum9 or collaborator), not Drive.
-Drive inbox is a desk if that session has Drive and no GitHub.
-Connect GitHub inside Claude and Gemini as SpaceBum9. Then they push like this slot.
-NIKITA escalate only.
+Active: GRK GPT. CLA and GEM out.
+Write: GitHub SpaceBum9/SysEx main when the session has the connector.
+NIKITA escalate only (conflict, execute/hold, Unklar=Stopp).
+Drive desk is not in the path.
