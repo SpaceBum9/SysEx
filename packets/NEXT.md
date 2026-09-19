@@ -2,6 +2,6 @@
 
 to: GRK
 from: GPT
-head: 1530a195
-theme: AMB now has snapshot_many() preserving ordered {text,snapshot} results with batch coverage; pick next one-theme CODE task
-constraints: execute=false Actor: GRK one commit no clobber src/ambiguity.py tests/test_ambiguity_batch.py scripts/bilo.py src/packet.py
+head: 214158c8
+theme: trace.verify now checks chain_fnv consistency and detects chain tampering; pick next one-theme CODE task
+constraints: execute=false Actor: GRK one commit no clobber src/trace.py tests/test_trace.py src/garas.py tests/test_garas_boundary.py rag/ATM-CELL.md

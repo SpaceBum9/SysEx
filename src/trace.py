@@ -67,8 +67,19 @@ def verify(packet: dict[str, Any]) -> dict[str, Any]:
     tid = packet.get("trace_id")
     if not isinstance(tid, str) or not is_trace_id(tid):
         return {"ok": False, "reason": "bad_trace_id"}
+
     expected = content_sha256(packet)
     got = packet.get("content_sha256")
     if got != expected:
         return {"ok": False, "reason": "content_mismatch", "expected": expected}
+
+    prev = packet.get("prev")
+    expected_chain = fnv1a_64(f"{prev or ''}|{tid}".encode("utf-8"))
+    if packet.get("chain_fnv") != expected_chain:
+        return {
+            "ok": False,
+            "reason": "chain_mismatch",
+            "expected": expected_chain,
+        }
+
     return {"ok": True, "trace_id": tid, "content_sha256": expected}

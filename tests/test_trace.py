@@ -31,6 +31,13 @@ class TraceTests(unittest.TestCase):
         self.assertFalse(verify(p)["ok"])
         self.assertEqual(verify(p)["reason"], "content_mismatch")
 
+    def test_chain_tamper_detected(self) -> None:
+        p = stamp({"text": "hallo"}, prev="TR-0000000000000000")
+        p["chain_fnv"] = "0000000000000000"
+        result = verify(p)
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["reason"], "chain_mismatch")
+
     def test_same_body_same_hash(self) -> None:
         p = {"text": "x", "verb": "halt", "prev": None}
         self.assertEqual(content_sha256(p), content_sha256(dict(p)))
