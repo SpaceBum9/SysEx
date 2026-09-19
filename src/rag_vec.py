@@ -61,3 +61,11 @@ def query(q: str, limit: int = 5) -> list[dict]:
         key=lambda h: (-h["score"], h["path"]),
     )
     return [h for h in ranked if h["score"] > 0][:limit]
+
+
+def query_many(queries: list[str], limit: int = 5) -> list[dict]:
+    results: list[dict] = []
+    for q in queries:
+        hits = query(q, limit=limit)
+        results.append({"q": q, "hits": hits})
+    return results
