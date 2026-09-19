@@ -1,4 +1,4 @@
-# Protocol notes after zip ingest (thread → repo)
+# Protocol notes after zip ingest
 
 Pipeline: Noise → A4B router → evidence ladder 1-6 → AMB snapshot → GARAS.decide → ATM.handle → trace.stamp.
 A4B = how strong a sentence may sound. GARAS = whether the packet may act. ATM = which verb.
@@ -8,3 +8,4 @@ Default denied. Observe-only allow. Execute always gated. Paper pack ≠ Dual-Al
 GROK in A4B = internal routing label, not xAI.
 Nikita = Main Bot = tertiary + wheel[0].
 compose() in src/packet.py is the interface. No live_write. No credentials.
+After every answer: append packets/LOG.md and put durable rules in rag/ lexicon/ or src/.

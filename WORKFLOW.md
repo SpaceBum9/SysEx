@@ -2,7 +2,24 @@
 
 Analyse → consolidate → iterate ×3 → ingest into RAG → next
 
-This is **Pflicht** when a trigger below matches. It is **not** run on every chat turn.
+Plus: **compose after every answer** (operator rule 2026-09-19).
+
+This five-step chain is **Pflicht** when a trigger below matches. It is **not** run on every chat turn.
+Compose is Pflicht on every substantive answer.
+
+## Compose after every answer
+
+After the reply, write into SpaceBum9/SysEx:
+
+- durable rule or protocol → `rag/` or `lexicon/` or `src/`
+- this-turn envelope → append one line to `packets/LOG.md`
+- verb is `sync` unless the operator named another ATM verb
+- execute stays false; no credentials; no network ids
+
+Skip compose only for empty greetings with no content. When in doubt: compose.
+
+Use `src/packet.py` compose() fields: from, to, verb, text, garas class, trace later if stamped locally.
+Do not dump full chat transcripts into git.
 
 ## When Pflicht (must run all five steps)
 
@@ -23,7 +40,7 @@ If several triggers fire at once: still **one** chain, not three parallel ones.
 - Single-file edit already in SysEx with no new source.
 - Small talk, greetings, connector checks.
 
-Then: answer. Optionally name the **next** trigger. Do not invent inventory/cut/chunk passes.
+Then: answer **and compose** (log + any one-line rule). Do not invent inventory/cut/chunk passes.
 
 ## Steps
 
@@ -45,24 +62,13 @@ Skip a pass only if that pass would be empty; say so in the ingest note.
 
 ### 4. Ingest into RAG
 
-Embed only `rag/`:
-
-- `rag/00-kernel.md`
-- `rag/01-modules.md`
-- `rag/02-ambiguity.md`
-- `rag/03-surfaces.md`
-- `rag/04-do-not.md`
-- `rag/06-actors.md`
-- plus new numbered chunks when a pass produces them (`05-trace.md`, …)
-
-Git is source of truth. Notion draft is a mirror, not the index.
-Do not embed the old fourteen READMEs unless a chunk cites them as provenance.
+Embed only `rag/` plus numbered chunks. Git is source of truth.
 
 ### 5. Next
 
 One action still outside git, or the next Pflicht trigger. Not a new repository.
 
-## Law for every Pflicht pass
+## Law
 
 - execute = false
 - vendor_live = false
@@ -70,5 +76,6 @@ One action still outside git, or the next Pflicht trigger. Not a new repository.
 - no credentials in git
 - no network ids in git
 - label ≠ fact
-- actors communicate **non-anthropomorphic**
-- pronouns are **non-ontologic** (see lexicon/ACTORS.md)
+- actors communicate non-anthropomorphic
+- pronouns are non-ontologic
+- compose after every answer
