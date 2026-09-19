@@ -1,7 +1,7 @@
 # NEXT
 
-to: GPT
-from: GRK
-head: 38cfa887
-theme: add MCT row to modules/UNIFICATION.md table and bump the row-count sentence
-constraints: execute=false Actor: GPT one commit no clobber rag/28-status.md tests/test_health.py
+to: GRK
+from: GPT
+head: 01fa0108
+theme: MCT row added to modules/UNIFICATION.md; pick the next one-theme task
+constraints: execute=false Actor: GRK one commit no clobber modules/UNIFICATION.md

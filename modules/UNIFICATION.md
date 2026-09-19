@@ -4,6 +4,7 @@ SysEx owns the names. Old repos stay provenance only.
 
 | Module | Needed for work | Source not copied |
 |---|---|---|
+| MCT | kernel runtime + health posture | `config/runtime.json` + `src/health.py` |
 | ZT | overlay between operator nodes | `packages/zero-tier-connectors` stub (do not reuse fake active MCP flags) |
 | ATM | public hostname + four verbs | `moreatm` + `schema/automaton_command.json` |
 | AMB | GPT/BILO claim guard | `MCT-2600027/ambiguity-language-guard.ts` rewritten here |
@@ -13,4 +14,4 @@ SysEx owns the names. Old repos stay provenance only.
 | BILO | lexicon/BILO.md | Universe 05 + lyrics as mnemonic only |
 | IVF | local TF-IDF candidate pruning | `scripts/rag_vec.py --ivf`; no vendor index |
 
-Unification means one health document listing all 8 table rows. It does not mean joining ZeroTier from CI or binding moreatm while it 503s.
+Unification means one health document listing all 9 table rows. It does not mean joining ZeroTier from CI or binding moreatm while it 503s.
